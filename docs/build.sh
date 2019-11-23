@@ -62,4 +62,4 @@ rsync -av "${SCRIPT_DIR}"/root/ "${SCRIPT_DIR}"/conf.py "${GENERATED_RST_DIR}"
 
 set -x
 sphinx-apidoc -o "${GENERATED_AUTOGEN_RST_DIR}" -T -P omnibot_receiver
-sphinx-build -W --keep-going -b html "${GENERATED_RST_DIR}" "${DOCS_OUTPUT_DIR}"
+sphinx-build --keep-going -b html "${GENERATED_RST_DIR}" "${DOCS_OUTPUT_DIR}"
