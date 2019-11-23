@@ -1,3 +1,7 @@
+.PHONY: build_docs # build the docs
+build_docs:
+    ./docs/build.sh
+
 clean:
 	find . -name \*.pyc -delete
 	find . -name __pycache__ -delete
