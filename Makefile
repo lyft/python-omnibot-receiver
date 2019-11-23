@@ -3,9 +3,9 @@ clean:
 	find . -name __pycache__ -delete
 	rm -rf dist/
 
-test:
-	python -3 -m pytest tests
-	python3 -bb -m pytest tests
+.PHONY: test_unit # run unit tests
+test_unit:
+	mkdir -p build
+	py.test --junitxml=build/unit.xml --cov=omnibot_receiver --cov-report=xml --no-cov-on-fail tests/unit
 
-lint:
-	flake8 .
+test: test_unit
