@@ -1,6 +1,6 @@
 .PHONY: build_docs # build the docs
 build_docs:
-    ./docs/build.sh
+	./docs/build.sh
 
 clean:
 	find . -name \*.pyc -delete
