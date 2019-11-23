@@ -1,0 +1,841 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>omnibot_receiver package &mdash; python-omnibot-receiver 3.1.1-c4c532 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/omnibot.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Changelog" href="../CHANGELOG.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> python-omnibot-receiver
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.1.1-c4c532
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">omnibot-receiver basics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation_and_usage.html">Installation and Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../CHANGELOG.html">Changelog</a></li>
+</ul>
+<p class="caption"><span class="caption-text">omnibot-receiver module docs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">omnibot_receiver package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-omnibot_receiver.response">omnibot_receiver.response module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-omnibot_receiver.router">omnibot_receiver.router module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-omnibot_receiver">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">python-omnibot-receiver</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>omnibot_receiver package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/autogen/omnibot_receiver.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="omnibot-receiver-package">
+<h1>omnibot_receiver package<a class="headerlink" href="#omnibot-receiver-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-omnibot_receiver.response">
+<span id="omnibot-receiver-response-module"></span><h2>omnibot_receiver.response module<a class="headerlink" href="#module-omnibot_receiver.response" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-response"></span><dl class="function">
+<dt id="omnibot_receiver.response.extend_response">
+<code class="descclassname">omnibot_receiver.response.</code><code class="descname">extend_response</code><span class="sig-paren">(</span><em>resp</em>, <em>extend_resp</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.response.extend_response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extend an omnibot response dict structure.</p>
+<p>Args:</p>
+<blockquote>
+<div>resp (dict): An omnibot response dict.
+extend_resp (dict): An omnibot response dict.</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>An omnibot response dict with the actions extended; example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    &#39;actions&#39;: [
+        {
+            &#39;action&#39;: &#39;chat.postMessage&#39;,
+            &#39;kwargs&#39;: {
+                &#39;text&#39;: &#39;example&#39;
+            }
+        },
+        {
+            &#39;action&#39;: &#39;chat.postMessage&#39;,
+            &#39;kwargs&#39;: {
+                &#39;text&#39;: &#39;extended example&#39;
+            }
+        }
+    ]
+}
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="omnibot_receiver.response.get_simple_post_message">
+<code class="descclassname">omnibot_receiver.response.</code><code class="descname">get_simple_post_message</code><span class="sig-paren">(</span><em>text</em>, <em>thread=True</em>, <em>omnibot_parse=None</em>, <em>ephemeral=False</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.response.get_simple_post_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a fully formed response for posting a single, simple, text message.</p>
+<p>Args:</p>
+<blockquote>
+<div>text (str): The text to post in the message.</div></blockquote>
+<p>Keyword Args:</p>
+<blockquote>
+<div>thread (bool): Whether or not to post a response in a thread.
+omnibot_parse (list): A list of resources omnibot should parse before
+posting the message.
+ephemeral (bool): Whether to post in-channel or ephemeral.</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>An actions dict, with a single chat.postMessage action; example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    &#39;actions&#39;: [
+        {
+            &#39;action&#39;: &#39;chat.postMessage&#39;,
+            &#39;kwargs&#39;: {
+                &#39;text&#39;: &#39;example&#39;
+            }
+        }
+    ]
+}
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="omnibot_receiver.response.get_simple_response">
+<code class="descclassname">omnibot_receiver.response.</code><code class="descname">get_simple_response</code><span class="sig-paren">(</span><em>text</em>, <em>omnibot_parse=None</em>, <em>ephemeral=False</em>, <em>replace_original=False</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.response.get_simple_response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a fully formed response for responding back to a slash command or
+interactive component event.</p>
+<p>Args:</p>
+<blockquote>
+<div>text (str): The text to respond with</div></blockquote>
+<p>Keyword Args:</p>
+<blockquote>
+<div>omnibot_parse (list): A list of resources omnibot should parse before
+posting the message.
+ephemeral (bool): Whether to post in-channel or ephemeral.
+replace_original (bool): Whether to replace the original message, or
+respond to it.</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>A responses dict, with a single response; example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    &#39;responses&#39;: [
+        {
+            &#39;response_type&#39;: &#39;ephemeral&#39;,
+            &#39;text&#39;: &#39;example&#39;
+        }
+    ]
+}
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="module-omnibot_receiver.router">
+<span id="omnibot-receiver-router-module"></span><h2>omnibot_receiver.router module<a class="headerlink" href="#module-omnibot_receiver.router" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-router"></span><dl class="exception">
+<dt id="omnibot_receiver.router.NoMatchedRouteError">
+<em class="property">exception </em><code class="descclassname">omnibot_receiver.router.</code><code class="descname">NoMatchedRouteError</code><a class="headerlink" href="#omnibot_receiver.router.NoMatchedRouteError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="omnibot_receiver.router.OmnibotInteractiveRouter">
+<em class="property">class </em><code class="descclassname">omnibot_receiver.router.</code><code class="descname">OmnibotInteractiveRouter</code><a class="headerlink" href="#omnibot_receiver.router.OmnibotInteractiveRouter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An omnibot interactive component event router. This router can map
+interactive component event callback IDs to functions.</p>
+<p>Every route will be passed the event that comes from omnibot as the
+first argument. It’s possible to define multiple routes for a single
+function, but it’s important to remember that only a single default route
+can be defined. For details on routing, see
+<a class="reference internal" href="#omnibot_receiver.router.OmnibotInteractiveRouter.route" title="omnibot_receiver.router.OmnibotInteractiveRouter.route"><code class="xref py py-func docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotInteractiveRouter.route()</span></code></a>.
+Here’s a basic routing example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">omnibot_receiver.router</span> <span class="kn">import</span> <span class="n">OmnibotInteractiveRouter</span>
+
+<span class="n">interactive_router</span> <span class="o">=</span> <span class="n">OmnibotInteractiveRouter</span><span class="p">()</span>
+
+<span class="nd">@interactive_router.route</span><span class="p">(</span><span class="s1">&#39;ping_callback&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;actions&#39;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;actions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;chat.postMessage&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;kwargs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;pong&#39;</span><span class="p">}</span>
+    <span class="p">})</span>
+    <span class="k">return</span> <span class="n">ret</span>
+</pre></div>
+</div>
+<p>It’s possible for multiple types of interactive components to share the
+same callback_id. By default, route will route all events to the defined
+function, but if you’d like to split specific event types out, you can
+specify a separate route with the event_type. Here’s a routing example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@interactive_router.route</span><span class="p">(</span>
+    <span class="s1">&#39;ping_callback&#39;</span><span class="p">,</span>
+    <span class="n">event_type</span><span class="o">=</span><span class="s1">&#39;dialog_submission&#39;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;actions&#39;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;actions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;chat.postMessage&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;kwargs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;pong&#39;</span><span class="p">}</span>
+    <span class="p">})</span>
+    <span class="k">return</span> <span class="n">ret</span>
+</pre></div>
+</div>
+<p>If you want the bot to default any unrecognized event to a function,
+you can set a function as a default route:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@interactive_router.set_default</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">unknown</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;actions&#39;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;actions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;chat.postMessage&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;kwargs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;Unrecognized callback.&#39;</span><span class="p">}</span>
+    <span class="p">})</span>
+    <span class="k">return</span> <span class="n">ret</span>
+</pre></div>
+</div>
+<p>The expected return structure of your routed functions is:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{&#39;actions&#39;: [
+    {&#39;action&#39;: &#39;&lt;slack_api_action&gt;&#39;,
+        &#39;kwargs&#39;: {
+            &#39;arg_to_slack_api_action&#39;: &#39;arg_value&#39;
+        }
+    }
+]}
+</pre></div>
+</div>
+<p>Note in the above that you can return a list of actions, allowing you to
+do things like post a response to a thread, post to a channel, add
+reactions to a message, etc.</p>
+<p>Once your routes are defined, you can send an omnibot event to the bot;
+it’ll route it to the correct function, and you’ll get a return, which
+you can return back to omnibot:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ret</span> <span class="o">=</span> <span class="n">interactive_router</span><span class="o">.</span><span class="n">handle_interactive_component</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="omnibot_receiver.router.OmnibotInteractiveRouter.add_event_callback">
+<code class="descname">add_event_callback</code><span class="sig-paren">(</span><em>callback_id</em>, <em>route_func</em>, <em>event_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotInteractiveRouter.add_event_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a function to be called for messages matching the given rule.</p>
+<p>Args:</p>
+<blockquote>
+<div>callback_id (str): A callback_id to match events against.
+event_type (str): The event type of interactive component, to match
+against.
+route_func (function): The function to call when serving this route</div></blockquote>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">omnibot_receiver.router</span> <span class="kn">import</span> <span class="n">OmnibotInteractiveRouter</span>
+
+<span class="n">interactive_router</span> <span class="o">=</span> <span class="n">OmnibotInteractiveRouter</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">event</span><span class="p">):</span>
+    <span class="c1"># return some actions</span>
+
+<span class="n">interactive_router</span><span class="o">.</span><span class="n">add_event_callback</span><span class="p">(</span><span class="s1">&#39;ping_callback&#39;</span><span class="p">,</span> <span class="n">ping</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="omnibot_receiver.router.OmnibotInteractiveRouter.handle_interactive_component">
+<code class="descname">handle_interactive_component</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotInteractiveRouter.handle_interactive_component" title="Permalink to this definition">¶</a></dt>
+<dd><p>For the given event, route the event to any routes registered that
+match the callback id, and return a list of actions for omnibot.</p>
+<p>Args:</p>
+<blockquote>
+<div>event (dict): An interactive event sent by omnibot.</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>A dict with an <cite>actions</cite> attribute that contains a list of slack
+actions to be returned to omnibot. See
+<a class="reference external" href="https://api.slack.com/methods">slack API methods docs</a> for
+actions and kwargs. Example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{&#39;actions&#39;: [
+    {&#39;action&#39;: &#39;chat.postMessage&#39;,
+        &#39;kwargs&#39;: {
+            {&#39;text&#39;: &#39;Hello World!&#39;}
+        }
+    },
+    {
+        &#39;action&#39;: &#39;reactions.add&#39;,
+        &#39;kwargs&#39;: {
+            &#39;name&#39;: &#39;heart&#39;
+        }
+    }
+]}
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="omnibot_receiver.router.OmnibotInteractiveRouter.route">
+<code class="descname">route</code><span class="sig-paren">(</span><em>callback_id</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotInteractiveRouter.route" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a route for this bot via a decorator.</p>
+<p>Args:</p>
+<blockquote>
+<div>callback_id (str): A callback_id to match messages against.</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="omnibot_receiver.router.OmnibotInteractiveRouter.set_default">
+<code class="descname">set_default</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotInteractiveRouter.set_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a route as a default route. If an event isn’t matched by
+another registered route, it’ll fall back to this route. Only a single
+route can be defined as a default; setting two defaults will result in
+a RouteAlreadyDefinedError being raised.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="omnibot_receiver.router.OmnibotMessageRouter">
+<em class="property">class </em><code class="descclassname">omnibot_receiver.router.</code><code class="descname">OmnibotMessageRouter</code><span class="sig-paren">(</span><em>help=''</em>, <em>help_as_default=True</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotMessageRouter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An omnibot message router. The omnibot router can be used to map commands
+and regex matches to functions in your code.</p>
+<p>Every route will be passed the message that comes from omnibot as the
+first argument. It’s possible to define multiple routes for a single
+function, but it’s important to remember that only a single default route
+can be defined. For details on routing, see
+<a class="reference internal" href="#omnibot_receiver.router.OmnibotMessageRouter.route" title="omnibot_receiver.router.OmnibotMessageRouter.route"><code class="xref py py-func docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotMessageRouter.route()</span></code></a>. Rules can
+also be specified more directly via
+<a class="reference internal" href="#omnibot_receiver.router.OmnibotMessageRouter.add_message_rule" title="omnibot_receiver.router.OmnibotMessageRouter.add_message_rule"><code class="xref py py-func docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotMessageRouter.add_message_rule()</span></code></a>.
+Here’s a basic routing example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">omnibot_receiver.router</span> <span class="kn">import</span> <span class="n">OmnibotMessageRouter</span>
+
+<span class="n">message_router</span> <span class="o">=</span> <span class="n">OmnibotMessageRouter</span><span class="p">(</span>
+    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;This bot is used for pings and pongs.&#39;</span>
+<span class="p">)</span>
+
+<span class="nd">@message_router.route</span><span class="p">(</span>
+    <span class="s1">&#39;ping&#39;</span><span class="p">,</span>
+    <span class="n">match_type</span><span class="o">=</span><span class="s1">&#39;command&#39;</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Responds to pings with pongs&#39;</span>
+<span class="p">)</span>
+<span class="nd">@message_router.route</span><span class="p">(</span>
+    <span class="s1">&#39;.*ping.*&#39;</span><span class="p">,</span>
+    <span class="n">match_type</span><span class="o">=</span><span class="s1">&#39;regex&#39;</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Responds to messages of pings with pongs&#39;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;actions&#39;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;actions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;chat.postMessage&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;kwargs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;pong&#39;</span><span class="p">}</span>
+    <span class="p">})</span>
+    <span class="k">return</span> <span class="n">ret</span>
+</pre></div>
+</div>
+<p>If you want the bot to default any unrecognized message to a function,
+you can set a function as a default route:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@message_router.set_default</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">unknown</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;actions&#39;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;actions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;chat.postMessage&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;kwargs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;Unrecognized command.&#39;</span><span class="p">}</span>
+    <span class="p">})</span>
+    <span class="k">return</span> <span class="n">ret</span>
+</pre></div>
+</div>
+<p>If no default route is defined, OmnibotMessageRouter will automatically
+route unmatched messages to the help documentation. If you want unmatched
+messages to be ignored, you can initialize OmnibotMessageRouter with
+help_as_default as False:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">omnibot_receiver.router</span> <span class="kn">import</span> <span class="n">OmnibotMessageRouter</span>
+
+<span class="n">message_router</span> <span class="o">=</span> <span class="n">OmnibotMessageRouter</span><span class="p">(</span>
+    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;This bot is used for pings and pongs.&#39;</span><span class="p">,</span>
+    <span class="n">help_as_default</span><span class="o">=</span><span class="bp">False</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The router is roughly modeled after Flask, so it’s possible to define
+variables to capture in the route. For example, below we’re capturing
+a part of the command string (user), and it’s being passed into the
+function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@message_router.route</span><span class="p">(</span>
+    <span class="s1">&#39;find &lt;user&gt;&#39;</span><span class="p">,</span>
+    <span class="n">match_type</span><span class="o">=</span><span class="s1">&#39;command&#39;</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Find info about a user.&#39;</span>
+<span class="p">)</span>
+<span class="k">def</span> <span class="nf">find_user</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;actions&#39;</span><span class="p">:</span> <span class="p">[]}</span>
+    <span class="n">ret</span><span class="p">[</span><span class="s1">&#39;actions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;chat.postMessage&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;kwargs&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="s1">&#39;example&#39;</span><span class="p">}</span>
+    <span class="p">})</span>
+    <span class="k">return</span> <span class="n">ret</span>
+</pre></div>
+</div>
+<p>The expected return structure of your routed functions is:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{&#39;actions&#39;: [
+    {&#39;action&#39;: &#39;&lt;slack_api_action&gt;&#39;,
+        &#39;kwargs&#39;: {
+            &#39;arg_to_slack_api_action&#39;: &#39;arg_value&#39;
+        }
+    }
+]}
+</pre></div>
+</div>
+<p>Note in the above that you can return a list of actions, allowing you to
+do things like post a response to a thread, post to a channel, add
+reactions to a message, etc.</p>
+<p>By default omnibot-receiver will auto-generate help documentation for your
+bot from the help parameters of the OmnibotMessageRouter class and the
+defined routes. It’s possible to override this, by setting the help:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@message_router.set_help</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="c1"># This is what gets returned by default.</span>
+    <span class="k">return</span> <span class="n">message_router</span><span class="o">.</span><span class="n">get_help</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Setting help doesn’t route a <cite>help</cite> command to your help function, if you
+wish to do so, add a command to the function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@message_router.route</span><span class="p">(</span>
+    <span class="s1">&#39;help&#39;</span><span class="p">,</span>
+    <span class="n">match_type</span><span class="o">=</span><span class="s1">&#39;command&#39;</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Help for this bot&#39;</span>
+<span class="p">)</span>
+<span class="nd">@message_router.set_help</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">help</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="c1"># This is what gets returned by default.</span>
+    <span class="k">return</span> <span class="n">message_router</span><span class="o">.</span><span class="n">get_help</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Once your routes are defined, you can send an omnibot message to the bot,
+it’ll route it to the correct function, and you’ll get a return, which
+you can return back to omnibot:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ret</span> <span class="o">=</span> <span class="n">message_router</span><span class="o">.</span><span class="n">handle_message</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="omnibot_receiver.router.OmnibotMessageRouter.add_message_rule">
+<code class="descname">add_message_rule</code><span class="sig-paren">(</span><em>rule</em>, <em>match_type</em>, <em>route_func</em>, <em>help=''</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotMessageRouter.add_message_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a function to be called for messages matching the given rule.</p>
+<p>Args:</p>
+<blockquote>
+<div><p>rule (str): A regex to match messages against.
+match_type (str): The type of message this route should match
+against:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">command</span> <span class="o">--</span> <span class="n">Match</span> <span class="n">against</span> <span class="n">messages</span> <span class="n">directed</span> <span class="n">at</span> <span class="n">this</span> <span class="n">bot</span><span class="o">.</span>
+<span class="n">regex</span>   <span class="o">--</span> <span class="n">Match</span> <span class="n">against</span> <span class="n">messages</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">channel</span> <span class="n">that</span> <span class="n">have</span>
+           <span class="n">been</span> <span class="n">targetted</span> <span class="n">at</span> <span class="n">this</span> <span class="n">bot</span> <span class="n">by</span> <span class="n">omnibot</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>route_func (function): The function to call when serving this route
+<a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs (dict): Keyword arguments (see below for more info)</p>
+</div></blockquote>
+<p>Keyword Args:</p>
+<blockquote>
+<div>help (str): Help text for this route, to be included with the help
+docs generated from
+<a class="reference internal" href="#omnibot_receiver.router.OmnibotMessageRouter.get_help" title="omnibot_receiver.router.OmnibotMessageRouter.get_help"><code class="xref py py-func docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotMessageRouter.get_help()</span></code></a></div></blockquote>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">omnibot_receiver.router</span> <span class="kn">import</span> <span class="n">OmnibotMessageRouter</span>
+
+<span class="n">message_router</span> <span class="o">=</span> <span class="n">OmnibotMessageRouter</span><span class="p">(</span>
+    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;This bot is used for pings and pongs.&#39;</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">ping</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+    <span class="c1"># return some actions</span>
+
+<span class="n">message_router</span><span class="o">.</span><span class="n">add_message_rule</span><span class="p">(</span>
+    <span class="s1">&#39;ping&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;command&#39;</span><span class="p">,</span>
+    <span class="n">ping</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Responds to pings&#39;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="omnibot_receiver.router.OmnibotMessageRouter.get_help">
+<code class="descname">get_help</code><span class="sig-paren">(</span><em>message</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotMessageRouter.get_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Autogenerate and return a help message for this router based on the
+commands and regexes registered.</p>
+<p>Args:</p>
+<blockquote>
+<div>message (dict): An omnibot message of type <cite>help</cite>.
+<a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs (dict): A dict provided for compatibility with the
+calling function.</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>A dict of action lists to be returned to omnibot. Example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    &#39;actions&#39; = [{
+        &#39;action&#39;: &#39;chat.postMessage&#39;,
+        &#39;kwargs&#39;: {
+            &#39;text&#39;: &#39;example message&#39;,
+            &#39;attachments&#39;: [{
+                &#39;title&#39;: &#39;Commands:&#39;,
+                &#39;fields&#39;: [{
+                    &#39;title&#39;: &#39;help&#39;,
+                    &#39;value&#39;: &#39;A help command.&#39;,
+                    &#39;short&#39;: False
+                }]
+            }]
+        }
+    }]
+}
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="omnibot_receiver.router.OmnibotMessageRouter.handle_message">
+<code class="descname">handle_message</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotMessageRouter.handle_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>For the given message, route the message to any routes registered that
+match its attributes, and return a list of actions for omnibot.</p>
+<p>Args:</p>
+<blockquote>
+<div>message (dict): A message sent by omnibot.</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>A dict with an <cite>actions</cite> attribute that contains a list of slack
+actions to be returned to omnibot. See
+<a class="reference external" href="https://api.slack.com/methods">slack API methods docs</a> for
+actions and kwargs. Example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{&#39;actions&#39;: [
+    {&#39;action&#39;: &#39;chat.postMessage&#39;,
+        &#39;kwargs&#39;: {
+            {&#39;text&#39;: &#39;Hello World!&#39;}
+        }
+    },
+    {
+        &#39;action&#39;: &#39;reactions.add&#39;,
+        &#39;kwargs&#39;: {
+            &#39;name&#39;: &#39;heart&#39;
+        }
+    }
+]}
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="omnibot_receiver.router.OmnibotMessageRouter.route">
+<code class="descname">route</code><span class="sig-paren">(</span><em>rule</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotMessageRouter.route" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a route for this bot via a decorator.</p>
+<p>Args:</p>
+<blockquote>
+<div>rule (str): A regex to match messages against.
+<a href="#id6"><span class="problematic" id="id7">**</span></a>kwargs (dict): Keyword arguments (see below for more info)</div></blockquote>
+<p>Keyword Args:</p>
+<blockquote>
+<div><p>match_type (str): The type of message this route should match
+against:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">command</span> <span class="o">--</span> <span class="n">Match</span> <span class="n">against</span> <span class="n">messages</span> <span class="n">directed</span> <span class="n">at</span> <span class="n">this</span> <span class="n">bot</span><span class="o">.</span>
+<span class="n">regex</span>   <span class="o">--</span> <span class="n">Match</span> <span class="n">against</span> <span class="n">messages</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">channel</span> <span class="n">that</span> <span class="n">have</span>
+           <span class="n">been</span> <span class="n">targetted</span> <span class="n">at</span> <span class="n">this</span> <span class="n">bot</span> <span class="n">by</span> <span class="n">omnibot</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>help (str): Help text for this route, to be included with the help
+docs generated from
+<a class="reference internal" href="#omnibot_receiver.router.OmnibotMessageRouter.get_help" title="omnibot_receiver.router.OmnibotMessageRouter.get_help"><code class="xref py py-func docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotMessageRouter.get_help()</span></code></a></p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="omnibot_receiver.router.OmnibotMessageRouter.set_default">
+<code class="descname">set_default</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotMessageRouter.set_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a route as a default route. If a message isn’t matched by
+another registered route, it’ll fall back to this route. Only a single
+route can be defined as a default; setting two defaults will result in
+a RouteAlreadyDefinedError being raised.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="omnibot_receiver.router.OmnibotMessageRouter.set_help">
+<code class="descname">set_help</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotMessageRouter.set_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a function to render help documentation. Note that this is
+not a route, but is the function that renders the help only. You must
+register a help command to route to this function.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="omnibot_receiver.router.OmnibotRouter">
+<em class="property">class </em><code class="descclassname">omnibot_receiver.router.</code><code class="descname">OmnibotRouter</code><span class="sig-paren">(</span><em>message_router=None</em>, <em>interactive_router=None</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotRouter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A generic omnibot router. The omnibot router can be used to map any type
+of message, to one of the configured routers.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">omnibot_receiver.router</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">OmnibotMessageRouter</span><span class="p">,</span>
+    <span class="n">OmnibotInteractiveRouter</span><span class="p">,</span>
+    <span class="n">OmnibotRouter</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">message_router</span> <span class="o">=</span> <span class="n">OmnibotMessageRouter</span><span class="p">(</span>
+    <span class="n">help</span><span class="o">=</span><span class="s1">&#39;This bot is used for pings and pongs.&#39;</span>
+<span class="p">)</span>
+<span class="n">interactive_router</span> <span class="o">=</span> <span class="n">OmnibotInteractiveRouter</span><span class="p">()</span>
+<span class="n">router</span> <span class="o">=</span> <span class="n">OmnibotRouter</span><span class="p">(</span>
+    <span class="n">message_router</span><span class="o">=</span><span class="n">message_router</span><span class="p">,</span>
+    <span class="n">interactive_router</span><span class="o">=</span><span class="n">interactive_router</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>This makes it possible to route all omnibot payloads via a single function.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bot_location</span> <span class="kn">import</span> <span class="n">router</span>
+
+<span class="nd">@flask_app.route</span><span class="p">(</span><span class="s1">&#39;/api/v1/bot&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">pingbot_route</span><span class="p">():</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">()</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">router</span><span class="o">.</span><span class="n">handle_message</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="omnibot_receiver.router.OmnibotRouter.handle_event">
+<code class="descname">handle_event</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#omnibot_receiver.router.OmnibotRouter.handle_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>For the given event, route the event to the relevant configured router
+and to the registered function that matches the event in that router.</p>
+<p>Args:</p>
+<blockquote>
+<div>event (dict): An event sent by omnibot.</div></blockquote>
+<p>Returns:</p>
+<blockquote>
+<div><p>A dict with an <cite>actions</cite> attribute that contains a list of slack
+actions to be returned to omnibot. See
+<a class="reference external" href="https://api.slack.com/methods">slack API methods docs</a> for
+actions and kwargs. Example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{&#39;actions&#39;: [
+    {&#39;action&#39;: &#39;chat.postMessage&#39;,
+        &#39;kwargs&#39;: {
+            {&#39;text&#39;: &#39;Hello World!&#39;}
+        }
+    },
+    {
+        &#39;action&#39;: &#39;reactions.add&#39;,
+        &#39;kwargs&#39;: {
+            &#39;name&#39;: &#39;heart&#39;
+        }
+    }
+]}
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="omnibot_receiver.router.RouteAlreadyDefinedError">
+<em class="property">exception </em><code class="descclassname">omnibot_receiver.router.</code><code class="descname">RouteAlreadyDefinedError</code><a class="headerlink" href="#omnibot_receiver.router.RouteAlreadyDefinedError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="omnibot_receiver.router.UnsupportedPayloadError">
+<em class="property">exception </em><code class="descclassname">omnibot_receiver.router.</code><code class="descname">UnsupportedPayloadError</code><a class="headerlink" href="#omnibot_receiver.router.UnsupportedPayloadError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-omnibot_receiver">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-omnibot_receiver" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../CHANGELOG.html" class="btn btn-neutral" title="Changelog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019-2019, Omnibot Project Authors
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

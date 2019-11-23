@@ -1,0 +1,30 @@
+omnibot\_receiver package
+=========================
+
+Submodules
+----------
+
+omnibot\_receiver.response module
+---------------------------------
+
+.. automodule:: omnibot_receiver.response
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+omnibot\_receiver.router module
+-------------------------------
+
+.. automodule:: omnibot_receiver.router
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: omnibot_receiver
+    :members:
+    :undoc-members:
+    :show-inheritance:
