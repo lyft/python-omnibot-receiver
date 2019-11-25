@@ -1,29 +1,9 @@
-# The modular source code checker: pep8, pyflakes and co
-# License: MIT
-# Upstream url: http://bitbucket.org/tarek/flake8
-flake8==2.2.3
-
-# Python style guide checker (come with flake8)
-# License: MIT
-# Upstream: http://pep8.readthedocs.org/
-pep8==1.7.0
-
 # A mature full-featured Python testing tool.
 # License: MIT
 # Upstream url: http://pytest.org/
-pytest==2.9.2
+pytest>4
 
 # Pytest plugin for measuring coverage.
 # License: MIT
 # Upstream url: https://github.com/pytest-dev/pytest-cov
-pytest-cov==2.3.0
-
-# Rolling backport of unittest.mock for all Pythons
-# License: BSD
-# Upstream url: https://mock.readthedocs.io/en/latest/
-mock==2.0.0
-
-# Thin-wrapper around the mock package for easier use with py.test.
-# License: MIT
-# Upstream url: https://pypi.python.org/pypi/pytest-mock
-pytest-mock==1.1
+pytest-cov>2.3.0
