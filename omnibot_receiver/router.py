@@ -275,6 +275,7 @@ class OmnibotMessageRouter(object):
             _sre.SRE_Pattern (a compiled regex)
         """
         route_regex = re.sub(r'(<\w+>)', r'(?P\1.+)', route)
+        route_regex = re.sub(r'(<\w+)\?>', r'(?P\1>.+?)', route_regex)
         return re.compile("^{}$".format(route_regex))
 
     def set_help(self, **kwargs):

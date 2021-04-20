@@ -218,6 +218,31 @@ class TestOmnibotMessageRouter(object):
         # Test overriden help routing with a command added
         assert message_router.handle_message(message) == 'overriden help'
 
+    def test_greedy_pattern_match(self):
+        message1 = {'args': '1 to 2', 'match_type': 'command'}
+        message2 = {'args': '1 to 2 to 3', 'match_type': 'command'}
+        message_router = OmnibotMessageRouter()
+
+        def a_to_b(message, a, b):
+            return 'a is {0}, b is {1}'.format(a, b)
+
+        message_router.add_message_rule('<a> to <b>', 'command', a_to_b)
+
+        assert message_router.handle_message(message1) == 'a is 1, b is 2'
+        assert message_router.handle_message(message2) == 'a is 1 to 2, b is 3'
+
+    def test_non_greedy_pattern_match(self):
+        message1 = {'args': '1 to 2', 'match_type': 'command'}
+        message2 = {'args': '1 to 2 to 3', 'match_type': 'command'}
+        message_router = OmnibotMessageRouter()
+
+        def a_to_b(message, a, b):
+            return 'a is {0}, b is {1}'.format(a, b)
+
+        message_router.add_message_rule('<a?> to <b>', 'command', a_to_b)
+
+        assert message_router.handle_message(message1) == 'a is 1, b is 2'
+        assert message_router.handle_message(message2) == 'a is 1, b is 2 to 3'
 
 class TestOmnibotInteractiveRouter(object):
 
