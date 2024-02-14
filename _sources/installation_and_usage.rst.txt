@@ -59,7 +59,7 @@ Here's a really basic example, that'll route message events, and interactive com
     @flask_app.route('/api/v1/bot', methods=['POST'])
     def pingbot_route():
         message = request.get_json()
-        ret = router.handle_message(message)
+        ret = router.handle_event(message)
         return jsonify(ret)
 
 The above example will respond with ``pong``, when a user sends ``@pingbot ping``, or when an user interacts with an interactive component, which sends the ``ping_callback`` event.

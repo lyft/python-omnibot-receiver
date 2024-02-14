@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation and Usage &mdash; python-omnibot-receiver 3.1.5-e3bf8f documentation</title>
+  <title>Installation and Usage &mdash; python-omnibot-receiver 3.1.5-905bc3 documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                3.1.5-e3bf8f
+                3.1.5-905bc3
               </div>
             
           
@@ -221,7 +221,7 @@
  <span class="nd">@flask_app.route</span><span class="p">(</span><span class="s1">&#39;/api/v1/bot&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
  <span class="k">def</span> <span class="nf">pingbot_route</span><span class="p">():</span>
      <span class="n">message</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">()</span>
-     <span class="n">ret</span> <span class="o">=</span> <span class="n">router</span><span class="o">.</span><span class="n">handle_message</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+     <span class="n">ret</span> <span class="o">=</span> <span class="n">router</span><span class="o">.</span><span class="n">handle_event</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
      <span class="k">return</span> <span class="n">jsonify</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
 </pre></div>
 </div>
