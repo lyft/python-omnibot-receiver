@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Changelog &mdash; python-omnibot-receiver 3.1.5-5a3680 documentation</title>
+  <title>Changelog &mdash; python-omnibot-receiver 3.1.5-e3bf8f documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                3.1.5-5a3680
+                3.1.5-e3bf8f
               </div>
             
           
@@ -91,11 +91,11 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation_and_usage.html">Installation and Usage</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">3.0.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">2.0.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">1.1.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">1.0.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">0.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#section-1">3.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#section-2">2.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#section-3">1.1.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#section-4">1.0.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#section-5">0.1.0</a></li>
 </ul>
 </li>
 </ul>
@@ -168,8 +168,8 @@
             
   <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>3.0.0<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="section-1">
+<h2>3.0.0<a class="headerlink" href="#section-1" title="Permalink to this headline">¶</a></h2>
 <p>This is a breaking release, as <a class="reference internal" href="autogen/omnibot_receiver.html#omnibot_receiver.router.OmnibotRouter" title="omnibot_receiver.router.OmnibotRouter"><code class="xref py py-class docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotRouter</span></code></a> is now a generic routing class that can route events to instances of <a class="reference internal" href="autogen/omnibot_receiver.html#omnibot_receiver.router.OmnibotMessageRouter" title="omnibot_receiver.router.OmnibotMessageRouter"><code class="xref py py-class docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotMessageRouter</span></code></a> or <a class="reference internal" href="autogen/omnibot_receiver.html#omnibot_receiver.router.OmnibotInteractiveRouter" title="omnibot_receiver.router.OmnibotInteractiveRouter"><code class="xref py py-class docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotInteractiveRouter</span></code></a>.</p>
 <ul class="simple">
 <li>Moved <a class="reference internal" href="autogen/omnibot_receiver.html#omnibot_receiver.router.OmnibotRouter" title="omnibot_receiver.router.OmnibotRouter"><code class="xref py py-class docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotRouter</span></code></a> to <a class="reference internal" href="autogen/omnibot_receiver.html#omnibot_receiver.router.OmnibotMessageRouter" title="omnibot_receiver.router.OmnibotMessageRouter"><code class="xref py py-class docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotMessageRouter</span></code></a></li>
@@ -179,28 +179,28 @@
 <li>Added <a class="reference internal" href="autogen/omnibot_receiver.html#omnibot_receiver.response.get_simple_response" title="omnibot_receiver.response.get_simple_response"><code class="xref py py-func docutils literal notranslate"><span class="pre">omnibot_receiver.response.get_simple_response()</span></code></a> to send back a simple reponse to omnibot, for interactive message or slash command responses.</li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h2>2.0.0<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="section-2">
+<h2>2.0.0<a class="headerlink" href="#section-2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Move default and help match types to separate functions, <cite>set_default</cite> and <cite>set_help</cite>. This simplifies the code and makes it clearer what’s happening, since it’s not necessary to send unused args into the decorators.</li>
 <li>Add custom exceptions <cite>RouteAlreadyDefinedError</cite> and <cite>NoMatchedRouteError</cite>, rather than returning <cite>ValueError</cite> when failing. <cite>RouteAlreadyDefinedError</cite> is used when a help or default decorator is set more than once. <cite>NoMatchedRouteError</cite> is used when a message is received that has no matching routes and the router was configured not to fall back to help documentation.</li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h2>1.1.0<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="section-3">
+<h2>1.1.0<a class="headerlink" href="#section-3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Have the router default unmatched routes to help, if no default is defined. This can be disabled through an arg on init. See <a class="reference internal" href="autogen/omnibot_receiver.html#omnibot_receiver.router.OmnibotRouter" title="omnibot_receiver.router.OmnibotRouter"><code class="xref py py-class docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotRouter</span></code></a> for more info.</li>
 <li>Added a new <a class="reference internal" href="autogen/omnibot_receiver.html#module-omnibot_receiver.response" title="omnibot_receiver.response"><code class="xref py py-mod docutils literal notranslate"><span class="pre">omnibot_receiver.response</span></code></a> module for handling common responses.</li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h2>1.0.0<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="section-4">
+<h2>1.0.0<a class="headerlink" href="#section-4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Refactor <a class="reference internal" href="autogen/omnibot_receiver.html#omnibot_receiver.router.OmnibotRouter" title="omnibot_receiver.router.OmnibotRouter"><code class="xref py py-class docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotRouter</span></code></a> to provide a full omnibot response through help, adding support for <cite>help</cite> match_types for routes.</li>
 </ul>
 </div>
-<div class="section" id="id5">
-<h2>0.1.0<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="section-5">
+<h2>0.1.0<a class="headerlink" href="#section-5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Initial commit</li>
 <li>Add support for <a class="reference internal" href="autogen/omnibot_receiver.html#omnibot_receiver.router.OmnibotRouter" title="omnibot_receiver.router.OmnibotRouter"><code class="xref py py-class docutils literal notranslate"><span class="pre">omnibot_receiver.router.OmnibotRouter</span></code></a></li>
@@ -228,7 +228,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019-2021, Omnibot Project Authors
+        &copy; Copyright 2019-2024, Omnibot Project Authors
 
     </p>
   </div>
