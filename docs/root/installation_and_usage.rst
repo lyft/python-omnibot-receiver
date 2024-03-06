@@ -84,16 +84,16 @@ Here is an example of an event payload for an interactive event (in this case, t
          }
        ],
        "bot": {
-         "bot_id": "AV3KU59U1",
+         "bot_id": "A123456",
          "name": "oktabot"
        },
        "callback_id": "oktabot_events",
        "channel": {
-         "id": "C06E50DBT45",
+         "id": "C123456",
          "name": "privategroup"
        },
        "message": {
-         "app_id": "AV3KU59U1",
+         "app_id": "A123456",
          "blocks": [
            {
              "block_id": "ZocFS",
@@ -177,7 +177,7 @@ Here is an example of an event payload for an interactive event (in this case, t
              "type": "actions"
            }
          ],
-         "bot_id": "B0101J806MD",
+         "bot_id": "B123456",
          "channels": [],
          "emails": [],
          "emojis": {
@@ -196,7 +196,7 @@ Here is an example of an event payload for an interactive event (in this case, t
              "is_owner": false,
              "is_primary_owner": false,
              "teams": [
-               "87654321"
+               "T123456"
              ]
            },
            "id": "11111111",
@@ -211,9 +211,9 @@ Here is an example of an event payload for an interactive event (in this case, t
            "name": "oktabot",
            "profile": {
              "always_active": true,
-             "api_app_id": "AV3KU59U1",
+             "api_app_id": "A123456",
              "avatar_hash": "ecbc05b8018e",
-             "bot_id": "BV0UGFQ02",
+             "bot_id": "B123456",
              "display_name": "",
              "display_name_normalized": "",
              "first_name": "oktabot",
@@ -236,11 +236,11 @@ Here is an example of an event payload for an interactive event (in this case, t
              "status_expiration": 0,
              "status_text": "",
              "status_text_canonical": "",
-             "team": "T029A67TC",
+             "team": "T123456",
              "title": ""
            },
            "real_name": "oktabot",
-           "team_id": "T029A67TC",
+           "team_id": "T123456",
            "tz": "America/Los_Angeles",
            "tz_label": "Pacific Standard Time",
            "tz_offset": -28800,
