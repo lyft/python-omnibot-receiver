@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation and Usage &mdash; python-omnibot-receiver 3.1.5-905bc3 documentation</title>
+  <title>Installation and Usage &mdash; python-omnibot-receiver 3.1.5-cff469 documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                3.1.5-905bc3
+                3.1.5-cff469
               </div>
             
           
@@ -226,6 +226,190 @@
 </pre></div>
 </div>
 <p>The above example will respond with <code class="docutils literal notranslate"><span class="pre">pong</span></code>, when a user sends <code class="docutils literal notranslate"><span class="pre">&#64;pingbot</span> <span class="pre">ping</span></code>, or when an user interacts with an interactive component, which sends the <code class="docutils literal notranslate"><span class="pre">ping_callback</span></code> event.</p>
+<p>Here is an example of an event payload for an interactive event (in this case, the “Continue Cleanup” button was clicked):</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>&quot;event&quot;: {
+    &quot;actions&quot;: [
+      {
+        &quot;action_id&quot;: &quot;continue_cleanup&quot;,
+        &quot;action_ts&quot;: &quot;1709149728.078244&quot;,
+        &quot;block_id&quot;: &quot;oktabot_events&quot;,
+        &quot;style&quot;: &quot;primary&quot;,
+        &quot;text&quot;: {
+          &quot;emoji&quot;: true,
+          &quot;text&quot;: &quot;Continue Cleanup&quot;,
+          &quot;type&quot;: &quot;plain_text&quot;
+        },
+        &quot;type&quot;: &quot;button&quot;
+      }
+    ],
+    &quot;bot&quot;: {
+      &quot;bot_id&quot;: &quot;A123456&quot;,
+      &quot;name&quot;: &quot;oktabot&quot;
+    },
+    &quot;callback_id&quot;: &quot;oktabot_events&quot;,
+    &quot;channel&quot;: {
+      &quot;id&quot;: &quot;C123456&quot;,
+      &quot;name&quot;: &quot;privategroup&quot;
+    },
+    &quot;message&quot;: {
+      &quot;app_id&quot;: &quot;A123456&quot;,
+      &quot;blocks&quot;: [
+        {
+          &quot;block_id&quot;: &quot;ZocFS&quot;,
+          &quot;text&quot;: {
+            &quot;emoji&quot;: true,
+            &quot;text&quot;: &quot;:oktacircle: Okta Cleanup :clean:&quot;,
+            &quot;type&quot;: &quot;plain_text&quot;
+          },
+          &quot;type&quot;: &quot;header&quot;
+        },
+        {
+          &quot;block_id&quot;: &quot;eFD0m&quot;,
+          &quot;fields&quot;: [
+            {
+              &quot;text&quot;: &quot;*Inactive Users:*\n22&quot;,
+              &quot;type&quot;: &quot;mrkdwn&quot;,
+              &quot;verbatim&quot;: false
+            },
+            {
+              &quot;text&quot;: &quot;*Suspended Users:*\n5&quot;,
+              &quot;type&quot;: &quot;mrkdwn&quot;,
+              &quot;verbatim&quot;: false
+            },
+            {
+              &quot;text&quot;: &quot;*Service Accounts:*\n59&quot;,
+              &quot;type&quot;: &quot;mrkdwn&quot;,
+              &quot;verbatim&quot;: false
+            },
+            {
+              &quot;text&quot;: &quot;*Groups with no Apps:*\n48&quot;,
+              &quot;type&quot;: &quot;mrkdwn&quot;,
+              &quot;verbatim&quot;: false
+            },
+            {
+              &quot;text&quot;: &quot;*Groups with no Users:*\n15&quot;,
+              &quot;type&quot;: &quot;mrkdwn&quot;,
+              &quot;verbatim&quot;: false
+            },
+            {
+              &quot;text&quot;: &quot;*Inactive Apps:*\n18&quot;,
+              &quot;type&quot;: &quot;mrkdwn&quot;,
+              &quot;verbatim&quot;: false
+            },
+            {
+              &quot;text&quot;: &quot;*Apps with No Users:*\n2&quot;,
+              &quot;type&quot;: &quot;mrkdwn&quot;,
+              &quot;verbatim&quot;: false
+            },
+            {
+              &quot;text&quot;: &quot;*Apps with No Usage:*\n1&quot;,
+              &quot;type&quot;: &quot;mrkdwn&quot;,
+              &quot;verbatim&quot;: false
+            }
+          ],
+          &quot;type&quot;: &quot;section&quot;
+        },
+        {
+          &quot;block_id&quot;: &quot;oktabot_events&quot;,
+          &quot;elements&quot;: [
+            {
+              &quot;action_id&quot;: &quot;continue_cleanup&quot;,
+              &quot;style&quot;: &quot;primary&quot;,
+              &quot;text&quot;: {
+                &quot;emoji&quot;: true,
+                &quot;text&quot;: &quot;Continue Cleanup&quot;,
+                &quot;type&quot;: &quot;plain_text&quot;
+              },
+              &quot;type&quot;: &quot;button&quot;
+            },
+            {
+              &quot;action_id&quot;: &quot;cancel_cleanup&quot;,
+              &quot;style&quot;: &quot;danger&quot;,
+              &quot;text&quot;: {
+                &quot;emoji&quot;: true,
+                &quot;text&quot;: &quot;Cancel Cleanup&quot;,
+                &quot;type&quot;: &quot;plain_text&quot;
+              },
+              &quot;type&quot;: &quot;button&quot;
+            }
+          ],
+          &quot;type&quot;: &quot;actions&quot;
+        }
+      ],
+      &quot;bot_id&quot;: &quot;B123456&quot;,
+      &quot;channels&quot;: [],
+      &quot;emails&quot;: [],
+      &quot;emojis&quot;: {
+        &quot;:clean:&quot;: &quot;clean&quot;,
+        &quot;:oktacircle:&quot;: &quot;oktacircle&quot;
+      },
+      &quot;parsed_text&quot;: &quot;:oktacircle: Okta Cleanup :clean: *Inactive Users:*\n22 *Suspended Users:*\n5 *Service Accounts:*\n59 *Groups with no Apps:*\n48 *Groups with no Users:*\n15 *Inactive Apps:*\n18 *Apps with No Users:*\n2 *Apps with No Usage:*\n1 Continue Cleanup button Cancel Cleanup button&quot;,
+      &quot;parsed_user&quot;: {
+        &quot;color&quot;: &quot;2b6836&quot;,
+        &quot;deleted&quot;: false,
+        &quot;enterprise_user&quot;: {
+          &quot;enterprise_id&quot;: &quot;11111111&quot;,
+          &quot;enterprise_name&quot;: &quot;Lyft Org&quot;,
+          &quot;id&quot;: &quot;12345678&quot;,
+          &quot;is_admin&quot;: false,
+          &quot;is_owner&quot;: false,
+          &quot;is_primary_owner&quot;: false,
+          &quot;teams&quot;: [
+            &quot;T123456&quot;
+          ]
+        },
+        &quot;id&quot;: &quot;11111111&quot;,
+        &quot;is_admin&quot;: false,
+        &quot;is_app_user&quot;: false,
+        &quot;is_bot&quot;: true,
+        &quot;is_email_confirmed&quot;: false,
+        &quot;is_owner&quot;: false,
+        &quot;is_primary_owner&quot;: false,
+        &quot;is_restricted&quot;: false,
+        &quot;is_ultra_restricted&quot;: false,
+        &quot;name&quot;: &quot;oktabot&quot;,
+        &quot;profile&quot;: {
+          &quot;always_active&quot;: true,
+          &quot;api_app_id&quot;: &quot;A123456&quot;,
+          &quot;avatar_hash&quot;: &quot;ecbc05b8018e&quot;,
+          &quot;bot_id&quot;: &quot;B123456&quot;,
+          &quot;display_name&quot;: &quot;&quot;,
+          &quot;display_name_normalized&quot;: &quot;&quot;,
+          &quot;first_name&quot;: &quot;oktabot&quot;,
+          &quot;image_1024&quot;: &quot;https://avatars.slack-edge.com/2020-04-10/1054481108146_ecbc05b8018e1f0a8d74_1024.jpg&quot;,
+          &quot;image_192&quot;: &quot;https://avatars.slack-edge.com/2020-04-10/1054481108146_ecbc05b8018e1f0a8d74_192.jpg&quot;,
+          &quot;image_24&quot;: &quot;https://avatars.slack-edge.com/2020-04-10/1054481108146_ecbc05b8018e1f0a8d74_24.jpg&quot;,
+          &quot;image_32&quot;: &quot;https://avatars.slack-edge.com/2020-04-10/1054481108146_ecbc05b8018e1f0a8d74_32.jpg&quot;,
+          &quot;image_48&quot;: &quot;https://avatars.slack-edge.com/2020-04-10/1054481108146_ecbc05b8018e1f0a8d74_48.jpg&quot;,
+          &quot;image_512&quot;: &quot;https://avatars.slack-edge.com/2020-04-10/1054481108146_ecbc05b8018e1f0a8d74_512.jpg&quot;,
+          &quot;image_72&quot;: &quot;https://avatars.slack-edge.com/2020-04-10/1054481108146_ecbc05b8018e1f0a8d74_72.jpg&quot;,
+          &quot;image_original&quot;: &quot;https://avatars.slack-edge.com/2020-04-10/1054481108146_ecbc05b8018e1f0a8d74_original.jpg&quot;,
+          &quot;is_custom_image&quot;: true,
+          &quot;last_name&quot;: &quot;&quot;,
+          &quot;phone&quot;: &quot;&quot;,
+          &quot;real_name&quot;: &quot;oktabot&quot;,
+          &quot;real_name_normalized&quot;: &quot;oktabot&quot;,
+          &quot;skype&quot;: &quot;&quot;,
+          &quot;status_emoji&quot;: &quot;&quot;,
+          &quot;status_emoji_display_info&quot;: [],
+          &quot;status_expiration&quot;: 0,
+          &quot;status_text&quot;: &quot;&quot;,
+          &quot;status_text_canonical&quot;: &quot;&quot;,
+          &quot;team&quot;: &quot;T123456&quot;,
+          &quot;title&quot;: &quot;&quot;
+        },
+        &quot;real_name&quot;: &quot;oktabot&quot;,
+        &quot;team_id&quot;: &quot;T123456&quot;,
+        &quot;tz&quot;: &quot;America/Los_Angeles&quot;,
+        &quot;tz_label&quot;: &quot;Pacific Standard Time&quot;,
+        &quot;tz_offset&quot;: -28800,
+        &quot;updated&quot;: 1621408361,
+        &quot;who_can_share_contact_card&quot;: &quot;EVERYONE&quot;
+      }
+    }
+}
+</pre></div>
+</div>
 <p>See <a class="reference internal" href="autogen/omnibot_receiver.html#module-omnibot_receiver.router" title="omnibot_receiver.router"><code class="xref py py-mod docutils literal notranslate"><span class="pre">omnibot_receiver.router</span></code></a> module documentation for more detailed OmnibotRouter usage.</p>
 </div>
 <div class="section" id="responding">
