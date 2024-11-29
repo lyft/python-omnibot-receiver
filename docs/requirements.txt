@@ -1,5 +1,5 @@
 -e .
-GitPython==2.0.8
+GitPython==3.1.37
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 Pygments==2.2.0
