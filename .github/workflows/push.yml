@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Setup python 3.10
+      - name: Setup python 3.10.17
         uses: actions/setup-python@v1
         with:
-          python-version: 3.10
+          python-version: 3.10.17
       - name: Install virtualenv
         run: pip install virtualenv
       - name: Build docs
@@ -35,10 +35,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Setup python 3.10
+      - name: Setup python 3.10.17
         uses: actions/setup-python@v1
         with:
-          python-version: 3.10
+          python-version: 3.10.17
       - name: Add wheel dependency
         run: pip install wheel
       - name: Generate dist
