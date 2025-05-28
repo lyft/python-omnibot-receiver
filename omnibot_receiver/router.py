@@ -85,7 +85,8 @@ class OmnibotRouter(object):
                 ]}
         """
         omnibot_payload_type = event.get('omnibot_payload_type')
-        if self.message_router and omnibot_payload_type == 'message' or omnibot_payload_type == 'reaction':
+        if (self.message_router and
+                omnibot_payload_type in {'message', 'reaction'}):
             return self.message_router.handle_message(event)
         elif (self.interactive_router and
               omnibot_payload_type == 'interactive_component'):
@@ -325,7 +326,8 @@ class OmnibotMessageRouter(object):
                     command  -- Match against messages directed at this bot.
                     regex    -- Match against messages in a channel that have
                                 been targeted at this bot by omnibot.
-                    reaction -- Match against reactions towards items made by this bot.
+                    reaction -- Match against reactions towards items
+                                made by this bot.
 
             route_func (function): The function to call when serving this route
             **kwargs (dict): Keyword arguments (see below for more info)

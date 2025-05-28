@@ -254,6 +254,7 @@ class TestOmnibotMessageRouter(object):
 
         assert message_router.handle_message(message) == 'pong'
 
+
 class TestOmnibotInteractiveRouter(object):
 
     def test_interactive_route(self):
