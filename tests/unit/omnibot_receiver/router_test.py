@@ -244,6 +244,16 @@ class TestOmnibotMessageRouter(object):
         assert message_router.handle_message(message1) == 'a is 1, b is 2'
         assert message_router.handle_message(message2) == 'a is 1, b is 2 to 3'
 
+    def test_reaction_route(self):
+        message = {'args': '+1', 'match_type': 'reaction'}
+        message_router = OmnibotMessageRouter()
+
+        @message_router.route(r'\+1', match_type='reaction')
+        def ping(message):
+            return 'pong'
+
+        assert message_router.handle_message(message) == 'pong'
+
 
 class TestOmnibotInteractiveRouter(object):
 
