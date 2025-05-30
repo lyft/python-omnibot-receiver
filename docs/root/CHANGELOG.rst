@@ -1,6 +1,11 @@
 Changelog
 =========
 
+3.1.6
+-----
+
+* Modified :class:`omnibot_receiver.router.OmnibotMessageRouter` to support reaction payload types
+
 3.0.0
 -----
 
